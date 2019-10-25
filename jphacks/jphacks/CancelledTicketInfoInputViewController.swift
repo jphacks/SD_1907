@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CancelledTicketInfoInputViewController.swift
 //  jphacks
 //
 //  Created by 山下陽央 on 2019/10/25.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CancelledTicketInfoInputViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    
 
 }
 
