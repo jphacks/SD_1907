@@ -5,7 +5,9 @@ target 'jphacks' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  pod "R.swift"
+  pod 'R.swift'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
   # Pods for jphacks
 
   target 'jphacksTests' do
