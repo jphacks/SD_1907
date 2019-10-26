@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDelegate {
     private var textfields = [UITextField]()
@@ -110,9 +111,7 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-//    https://tech-blog.sgr-ksmt.org/2016/02/20/form_changeable/
-    
+        
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTag = textField.tag + 1
         if let nextTextField = view.viewWithTag(nextTag) {
@@ -121,5 +120,16 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         return true
     }
     
+    private func showProgress() {
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.show()
+    }
     
+    private func dismissProgress() {
+        SVProgressHUD.setDefaultMaskType(.none)
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+        }
+    }
 }

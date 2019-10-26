@@ -27,4 +27,6 @@ class PlanCandidatesTableViewCell: UITableViewCell {
     @IBOutlet weak var arriveTimeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var reviewQuantityLabel: UILabel!
+    @IBOutlet weak var reviewQualityLabel: UILabel!
 }

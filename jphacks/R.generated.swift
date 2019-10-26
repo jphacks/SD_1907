@@ -114,12 +114,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `PlanCandidatesTableViewCell`.
     static let planCandidatesTableViewCell = _R.nib._PlanCandidatesTableViewCell()
     /// Nib `PlanCandidatesTableViewController`.
     static let planCandidatesTableViewController = _R.nib._PlanCandidatesTableViewController()
+    /// Nib `RetuernTripCandidatesTableViewCell`.
+    static let retuernTripCandidatesTableViewCell = _R.nib._RetuernTripCandidatesTableViewCell()
     /// Nib `RouteViewController`.
     static let routeViewController = _R.nib._RouteViewController()
 
@@ -140,6 +142,14 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "RetuernTripCandidatesTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.retuernTripCandidatesTableViewCell) instead")
+    static func retuernTripCandidatesTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.retuernTripCandidatesTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "RouteViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.routeViewController) instead")
     static func routeViewController(_: Void = ()) -> UIKit.UINib {
@@ -153,6 +163,10 @@ struct R: Rswift.Validatable {
 
     static func planCandidatesTableViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.planCandidatesTableViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func retuernTripCandidatesTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RetuernTripCandidatesTableViewCell? {
+      return R.nib.retuernTripCandidatesTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RetuernTripCandidatesTableViewCell
     }
 
     static func routeViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -225,6 +239,17 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _RetuernTripCandidatesTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "RetuernTripCandidatesTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RetuernTripCandidatesTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RetuernTripCandidatesTableViewCell
       }
 
       fileprivate init() {}
