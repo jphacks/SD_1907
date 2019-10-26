@@ -14,6 +14,11 @@ class PlanCandidatesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(R.nib.planCandidatesTableViewCell)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         navigationController?.navigationBar.isHidden = false
     }
 
@@ -37,5 +42,5 @@ class PlanCandidatesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
-    }    
+    }
 }
