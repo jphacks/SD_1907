@@ -14,6 +14,7 @@ class PlanCandidatesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(R.nib.planCandidatesTableViewCell)
+        navigationController?.navigationBar.isHidden = false
     }
 
     // MARK: - Table view data source
@@ -28,15 +29,13 @@ class PlanCandidatesTableViewController: UITableViewController {
         return 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.planCandidatesTableViewCell, for: indexPath)!
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
