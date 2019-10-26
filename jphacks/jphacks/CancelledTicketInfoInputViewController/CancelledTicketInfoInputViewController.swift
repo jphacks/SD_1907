@@ -75,13 +75,25 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
     }
     
     
+    @IBAction func didTapConfirmButton(_ sender: Any) {
+        search()
+    }
+    
+    private func search() {
+        
+    }
     
 //    https://tech-blog.sgr-ksmt.org/2016/02/20/form_changeable/
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField != numberOfPplTextField {
-            textField.resignFirstResponder()
+            let nextTag = textField.tag + 1
+            if let nextTextField = view.viewWithTag(nextTag){
+                nextTextField.becomeFirstResponder()
+            }
+        } else {
+            search()
         }
 
         return true
