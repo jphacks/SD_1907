@@ -16,15 +16,34 @@ class RouteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var airportALabel: UILabel!
+    
+    @IBOutlet weak var airportB: UILabel!
+    
+    @IBOutlet weak var timeALabel: UILabel!
+    
+    @IBOutlet weak var timeBLabel: UILabel!
+    
+    @IBOutlet weak var flightNoLabel: UILabel!
+    
+    @IBOutlet weak var hotelImageView: UIImageView!
+    
+    @IBOutlet weak var rateLabel: UILabel!
+    
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    
+    @IBOutlet weak var returnDateLabel: UILabel!
+    
+    
+    @IBOutlet weak var returnTripInfoStackView: UIStackView!
+    
+    
+    
+    @IBAction func didTapOpenMapButton(_ sender: Any) {
+        
     }
-    */
-
+    
+    @IBAction func didTapDetailButton(_ sender: Any) {
+        
+    }
 }

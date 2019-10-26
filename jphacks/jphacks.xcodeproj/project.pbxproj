@@ -11,14 +11,11 @@
 		6163CB2200C347775B258FC1 /* Pods_jphacks_jphacksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1202D0CF735340F8222F6468 /* Pods_jphacks_jphacksUITests.framework */; };
 		640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */; };
 		640C9C712363D8FB0011C8B0 /* RouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C702363D8FB0011C8B0 /* RouteViewController.xib */; };
-		640C9C76236403ED0011C8B0 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C74236403EC0011C8B0 /* RouteTableViewCell.swift */; };
-		640C9C77236403ED0011C8B0 /* RouteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C75236403EC0011C8B0 /* RouteTableViewCell.xib */; };
-		640C9C7A236406130011C8B0 /* RouteDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C78236406130011C8B0 /* RouteDetailTableViewCell.swift */; };
-		640C9C7B236406130011C8B0 /* RouteDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C79236406130011C8B0 /* RouteDetailTableViewCell.xib */; };
 		640C9C7E23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */; };
 		640C9C7F23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */; };
 		64E552FD23632C0600F172F4 /* PlanCandidatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */; };
 		64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */; };
+		666D9F55236488B300C91AC9 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F54236488B300C91AC9 /* Calendar+Extension.swift */; };
 		66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56823630F1800CFA256 /* AppDelegate.swift */; };
 		66D0E56B23630F1800CFA256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56A23630F1800CFA256 /* SceneDelegate.swift */; };
 		66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */; };
@@ -32,7 +29,7 @@
 		66D0E59E2363196A00CFA256 /* TripInfoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E59D2363196A00CFA256 /* TripInfoApi.swift */; };
 		66F5C0A42363F52F0049D6D6 /* PlanCandidatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F5C0A22363F52F0049D6D6 /* PlanCandidatesTableViewController.swift */; };
 		66F5C0A52363F52F0049D6D6 /* PlanCandidatesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F5C0A32363F52F0049D6D6 /* PlanCandidatesTableViewController.xib */; };
-		66F5C0A7236421C60049D6D6 /* textField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F5C0A6236421C60049D6D6 /* textField+Extension.swift */; };
+		66F5C0A7236421C60049D6D6 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F5C0A6236421C60049D6D6 /* TextField+Extension.swift */; };
 		94BF321676145CB06C7CCA5B /* Pods_jphacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6608C310A20F708F75CE795B /* Pods_jphacks.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,15 +57,12 @@
 		3C9FFF0C72E9539F9CE2B7A7 /* Pods-jphacks-jphacksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jphacks-jphacksUITests.debug.xcconfig"; path = "Target Support Files/Pods-jphacks-jphacksUITests/Pods-jphacks-jphacksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		640C9C702363D8FB0011C8B0 /* RouteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteViewController.xib; sourceTree = "<group>"; };
-		640C9C74236403EC0011C8B0 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
-		640C9C75236403EC0011C8B0 /* RouteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteTableViewCell.xib; sourceTree = "<group>"; };
-		640C9C78236406130011C8B0 /* RouteDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailTableViewCell.swift; sourceTree = "<group>"; };
-		640C9C79236406130011C8B0 /* RouteDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteDetailTableViewCell.xib; sourceTree = "<group>"; };
 		640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetuernTripCandidatesTableViewCell.swift; sourceTree = "<group>"; };
 		640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetuernTripCandidatesTableViewCell.xib; sourceTree = "<group>"; };
 		64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCandidatesTableViewCell.swift; sourceTree = "<group>"; };
 		64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCandidatesTableViewCell.xib; sourceTree = "<group>"; };
 		6608C310A20F708F75CE795B /* Pods_jphacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jphacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		666D9F54236488B300C91AC9 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
 		66D0E56523630F1800CFA256 /* jphacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jphacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56823630F1800CFA256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D0E56A23630F1800CFA256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +82,7 @@
 		66D0E59D2363196A00CFA256 /* TripInfoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfoApi.swift; sourceTree = "<group>"; };
 		66F5C0A22363F52F0049D6D6 /* PlanCandidatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCandidatesTableViewController.swift; sourceTree = "<group>"; };
 		66F5C0A32363F52F0049D6D6 /* PlanCandidatesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCandidatesTableViewController.xib; sourceTree = "<group>"; };
-		66F5C0A6236421C60049D6D6 /* textField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "textField+Extension.swift"; sourceTree = "<group>"; };
+		66F5C0A6236421C60049D6D6 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		77B24F0930E51F3F12BF2F19 /* Pods_jphacksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jphacksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55FA643A66CE71FE801D3F /* Pods-jphacks-jphacksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jphacks-jphacksUITests.release.xcconfig"; path = "Target Support Files/Pods-jphacks-jphacksUITests/Pods-jphacks-jphacksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F7A406311F15CA828D06F307 /* Pods-jphacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jphacks.debug.xcconfig"; path = "Target Support Files/Pods-jphacks/Pods-jphacks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +130,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		666D9F532364884700C91AC9 /* RetuernTripCandidatesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */,
+				640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */,
+			);
+			path = RetuernTripCandidatesTableViewCell;
+			sourceTree = "<group>";
+		};
+		666D9F56236488D800C91AC9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				66F5C0A6236421C60049D6D6 /* TextField+Extension.swift */,
+				666D9F54236488B300C91AC9 /* Calendar+Extension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		66D0E55C23630F1800CFA256 = {
 			isa = PBXGroup;
 			children = (
@@ -164,19 +176,14 @@
 				66D0E599236311CF00CFA256 /* R.generated.swift */,
 				66D0E56823630F1800CFA256 /* AppDelegate.swift */,
 				66D0E56A23630F1800CFA256 /* SceneDelegate.swift */,
-				66F5C0A6236421C60049D6D6 /* textField+Extension.swift */,
+				666D9F56236488D800C91AC9 /* Utility */,
 				66F5C0982363EDBA0049D6D6 /* CancelledTicketInfoInputViewController */,
 				66F5C0972363EDAC0049D6D6 /* API */,
 				66F5C0952363ED5F0049D6D6 /* PlanCandidatesTableViewCell */,
 				66F5C09D2363F4670049D6D6 /* PlanCandidatesTableViewController */,
 				66F5C0962363ED890049D6D6 /* RouteViewController */,
+				666D9F532364884700C91AC9 /* RetuernTripCandidatesTableViewCell */,
 				66D0E57123630F1900CFA256 /* Assets.xcassets */,
-				640C9C74236403EC0011C8B0 /* RouteTableViewCell.swift */,
-				640C9C78236406130011C8B0 /* RouteDetailTableViewCell.swift */,
-				640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */,
-				640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */,
-				640C9C79236406130011C8B0 /* RouteDetailTableViewCell.xib */,
-				640C9C75236403EC0011C8B0 /* RouteTableViewCell.xib */,
 				66D0E57323630F1900CFA256 /* LaunchScreen.storyboard */,
 				66D0E57623630F1900CFA256 /* Info.plist */,
 			);
@@ -372,9 +379,7 @@
 				66D0E57223630F1900CFA256 /* Assets.xcassets in Resources */,
 				64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */,
 				66D0E57023630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard in Resources */,
-				640C9C77236403ED0011C8B0 /* RouteTableViewCell.xib in Resources */,
 				640C9C7F23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib in Resources */,
-				640C9C7B236406130011C8B0 /* RouteDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,15 +526,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				640C9C7A236406130011C8B0 /* RouteDetailTableViewCell.swift in Sources */,
 				640C9C7E23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift in Sources */,
+				666D9F55236488B300C91AC9 /* Calendar+Extension.swift in Sources */,
 				64E552FD23632C0600F172F4 /* PlanCandidatesTableViewCell.swift in Sources */,
-				640C9C76236403ED0011C8B0 /* RouteTableViewCell.swift in Sources */,
 				66D0E59C2363191B00CFA256 /* TripInfoClient.swift in Sources */,
 				66F5C0A42363F52F0049D6D6 /* PlanCandidatesTableViewController.swift in Sources */,
 				640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */,
 				66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */,
-				66F5C0A7236421C60049D6D6 /* textField+Extension.swift in Sources */,
+				66F5C0A7236421C60049D6D6 /* TextField+Extension.swift in Sources */,
 				66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */,
 				66D0E59E2363196A00CFA256 /* TripInfoApi.swift in Sources */,
 				66D0E56B23630F1800CFA256 /* SceneDelegate.swift in Sources */,

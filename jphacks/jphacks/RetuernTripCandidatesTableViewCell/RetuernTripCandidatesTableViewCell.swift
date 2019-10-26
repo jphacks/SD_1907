@@ -14,11 +14,13 @@ class RetuernTripCandidatesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    @IBOutlet weak var departTimeLabel: UILabel!
+    @IBOutlet weak var arriveTimeLabel: UILabel!
+    
+    @IBOutlet weak var airportALabel: UILabel!
+    @IBOutlet weak var airportBLabel: UILabel!
+    
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
 }
