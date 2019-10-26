@@ -29,6 +29,13 @@ mongoDB (t-takuya.com:27017/local/jphacks):結果保存
 mongoDB (t-takuya.com:27017/local/jphacks_req):リクエスト結果(updateで結果をアプデ)
 
 - リクエストクエリ
+- 必須：req_id(DB識別のため)
 - (1) rakuten
     - Prefecture
     - City
+- (2) 
+
+# サーバー側で使ってる技術
+- AWS(API Gateway, Lambda, EC2, Dynamo DB)
+- Python
+- Node.js
