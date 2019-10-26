@@ -114,10 +114,12 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `PlanCandidatesTableViewCell`.
     static let planCandidatesTableViewCell = _R.nib._PlanCandidatesTableViewCell()
+    /// Nib `PlanCandidatesTableViewController`.
+    static let planCandidatesTableViewController = _R.nib._PlanCandidatesTableViewController()
     /// Nib `RouteViewController`.
     static let routeViewController = _R.nib._RouteViewController()
 
@@ -126,6 +128,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.planCandidatesTableViewCell) instead")
     static func planCandidatesTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.planCandidatesTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "PlanCandidatesTableViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.planCandidatesTableViewController) instead")
+    static func planCandidatesTableViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.planCandidatesTableViewController)
     }
     #endif
 
@@ -141,9 +151,21 @@ struct R: Rswift.Validatable {
       return R.nib.planCandidatesTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlanCandidatesTableViewCell
     }
 
+    static func planCandidatesTableViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.planCandidatesTableViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
     static func routeViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.routeViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `PlanCandidatesTableViewCell`.
+    static let planCandidatesTableViewCell: Rswift.ReuseIdentifier<PlanCandidatesTableViewCell> = Rswift.ReuseIdentifier(identifier: "PlanCandidatesTableViewCell")
 
     fileprivate init() {}
   }
@@ -170,12 +192,26 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
-    struct _PlanCandidatesTableViewCell: Rswift.NibResourceType {
+    struct _PlanCandidatesTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = PlanCandidatesTableViewCell
+
       let bundle = R.hostingBundle
+      let identifier = "PlanCandidatesTableViewCell"
       let name = "PlanCandidatesTableViewCell"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlanCandidatesTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlanCandidatesTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _PlanCandidatesTableViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "PlanCandidatesTableViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
 
       fileprivate init() {}

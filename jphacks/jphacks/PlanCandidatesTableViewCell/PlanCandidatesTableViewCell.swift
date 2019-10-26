@@ -21,4 +21,8 @@ class PlanCandidatesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBOutlet weak var destinationLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    @IBOutlet weak var departTimeLabel: UILabel!
+    @IBOutlet weak var arriveTimeLabel: UILabel!
 }
