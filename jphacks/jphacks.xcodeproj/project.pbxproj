@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E39F152C87B8B2F4D3DCDBE /* Pods_jphacksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B24F0930E51F3F12BF2F19 /* Pods_jphacksTests.framework */; };
 		6163CB2200C347775B258FC1 /* Pods_jphacks_jphacksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1202D0CF735340F8222F6468 /* Pods_jphacks_jphacksUITests.framework */; };
+		640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */; };
+		640C9C712363D8FB0011C8B0 /* RouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C702363D8FB0011C8B0 /* RouteViewController.xib */; };
+		64E552FD23632C0600F172F4 /* PlanCandidatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */; };
+		64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */; };
 		66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56823630F1800CFA256 /* AppDelegate.swift */; };
 		66D0E56B23630F1800CFA256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56A23630F1800CFA256 /* SceneDelegate.swift */; };
 		66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */; };
@@ -45,6 +49,10 @@
 		0C8AD8C6245F37565AA81509 /* Pods-jphacksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jphacksTests.release.xcconfig"; path = "Target Support Files/Pods-jphacksTests/Pods-jphacksTests.release.xcconfig"; sourceTree = "<group>"; };
 		1202D0CF735340F8222F6468 /* Pods_jphacks_jphacksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jphacks_jphacksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9FFF0C72E9539F9CE2B7A7 /* Pods-jphacks-jphacksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jphacks-jphacksUITests.debug.xcconfig"; path = "Target Support Files/Pods-jphacks-jphacksUITests/Pods-jphacks-jphacksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		640C9C702363D8FB0011C8B0 /* RouteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteViewController.xib; sourceTree = "<group>"; };
+		64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCandidatesTableViewCell.swift; sourceTree = "<group>"; };
+		64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCandidatesTableViewCell.xib; sourceTree = "<group>"; };
 		6608C310A20F708F75CE795B /* Pods_jphacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jphacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56523630F1800CFA256 /* jphacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jphacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56823630F1800CFA256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,10 @@
 				66D0E59B2363191B00CFA256 /* TripInfoClient.swift */,
 				66D0E59D2363196A00CFA256 /* TripInfoApi.swift */,
 				66D0E56E23630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard */,
+				64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */,
+				64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */,
+				640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */,
+				640C9C702363D8FB0011C8B0 /* RouteViewController.xib */,
 				66D0E57123630F1900CFA256 /* Assets.xcassets */,
 				66D0E57323630F1900CFA256 /* LaunchScreen.storyboard */,
 				66D0E57623630F1900CFA256 /* Info.plist */,
@@ -288,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D0E57523630F1900CFA256 /* LaunchScreen.storyboard in Resources */,
+				640C9C712363D8FB0011C8B0 /* RouteViewController.xib in Resources */,
 				66D0E57223630F1900CFA256 /* Assets.xcassets in Resources */,
+				64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */,
 				66D0E57023630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,7 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E552FD23632C0600F172F4 /* PlanCandidatesTableViewCell.swift in Sources */,
 				66D0E59C2363191B00CFA256 /* TripInfoClient.swift in Sources */,
+				640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */,
 				66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */,
 				66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */,
 				66D0E59E2363196A00CFA256 /* TripInfoApi.swift in Sources */,
