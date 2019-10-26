@@ -37,5 +37,6 @@ mongoDB (t-takuya.com:27017/local/jphacks_req):リクエスト結果(updateで�
 
 # サーバー側で使ってる技術
 - AWS(API Gateway, Lambda, EC2, Dynamo DB)
+- MongoDB
 - Python
 - Node.js
