@@ -114,6 +114,40 @@ struct R: Rswift.Validatable {
   }
   #endif
 
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  struct nib {
+    /// Nib `PlanCandidatesTableViewCell`.
+    static let planCandidatesTableViewCell = _R.nib._PlanCandidatesTableViewCell()
+    /// Nib `RouteViewController`.
+    static let routeViewController = _R.nib._RouteViewController()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "PlanCandidatesTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.planCandidatesTableViewCell) instead")
+    static func planCandidatesTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.planCandidatesTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "RouteViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.routeViewController) instead")
+    static func routeViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.routeViewController)
+    }
+    #endif
+
+    static func planCandidatesTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlanCandidatesTableViewCell? {
+      return R.nib.planCandidatesTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlanCandidatesTableViewCell
+    }
+
+    static func routeViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.routeViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -133,6 +167,34 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _PlanCandidatesTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "PlanCandidatesTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlanCandidatesTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlanCandidatesTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _RouteViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "RouteViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

@@ -146,14 +146,10 @@
 				66D0E599236311CF00CFA256 /* R.generated.swift */,
 				66D0E56823630F1800CFA256 /* AppDelegate.swift */,
 				66D0E56A23630F1800CFA256 /* SceneDelegate.swift */,
-				66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */,
-				66D0E59B2363191B00CFA256 /* TripInfoClient.swift */,
-				66D0E59D2363196A00CFA256 /* TripInfoApi.swift */,
-				66D0E56E23630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard */,
-				64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */,
-				64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */,
-				640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */,
-				640C9C702363D8FB0011C8B0 /* RouteViewController.xib */,
+				66F5C0982363EDBA0049D6D6 /* CancelledTicketInfoInputViewController */,
+				66F5C0972363EDAC0049D6D6 /* API */,
+				66F5C0952363ED5F0049D6D6 /* PlanCandidatesTableViewCell */,
+				66F5C0962363ED890049D6D6 /* RouteViewController */,
 				66D0E57123630F1900CFA256 /* Assets.xcassets */,
 				66D0E57323630F1900CFA256 /* LaunchScreen.storyboard */,
 				66D0E57623630F1900CFA256 /* Info.plist */,
@@ -177,6 +173,42 @@
 				66D0E58C23630F1900CFA256 /* Info.plist */,
 			);
 			path = jphacksUITests;
+			sourceTree = "<group>";
+		};
+		66F5C0952363ED5F0049D6D6 /* PlanCandidatesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */,
+				64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */,
+			);
+			path = PlanCandidatesTableViewCell;
+			sourceTree = "<group>";
+		};
+		66F5C0962363ED890049D6D6 /* RouteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */,
+				640C9C702363D8FB0011C8B0 /* RouteViewController.xib */,
+			);
+			path = RouteViewController;
+			sourceTree = "<group>";
+		};
+		66F5C0972363EDAC0049D6D6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				66D0E59B2363191B00CFA256 /* TripInfoClient.swift */,
+				66D0E59D2363196A00CFA256 /* TripInfoApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		66F5C0982363EDBA0049D6D6 /* CancelledTicketInfoInputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				66D0E56E23630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard */,
+				66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */,
+			);
+			path = CancelledTicketInfoInputViewController;
 			sourceTree = "<group>";
 		};
 		C28CE23255C7D7CFFCE61FC1 /* Frameworks */ = {
