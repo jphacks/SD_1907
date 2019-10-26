@@ -21,4 +21,14 @@
 
 - Rakuten Travel API
 - Google Maps API
-- 
+
+
+## Reference
+
+mongoDB (t-takuya.com:27017/local/jphacks):結果保存
+mongoDB (t-takuya.com:27017/local/jphacks_req):リクエスト結果(updateで結果をアプデ)
+
+- リクエストクエリ
+- (1) rakuten
+    - Prefecture
+    - City
