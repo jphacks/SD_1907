@@ -153,6 +153,7 @@ struct _R: Rswift.Validatable {
       let name = "CancelledTicketInfoInputViewController"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "7921463931110066", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '7921463931110066' is used in storyboard 'CancelledTicketInfoInputViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
