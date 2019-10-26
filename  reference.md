@@ -16,3 +16,9 @@
 
 ->経路表示(Google Map)
 電話番号・URL
+
+## 実装中のAPI
+
+- Rakuten Travel API
+- Google Maps API
+- 
