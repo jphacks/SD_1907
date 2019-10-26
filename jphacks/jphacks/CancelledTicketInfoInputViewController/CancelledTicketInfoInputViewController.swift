@@ -25,7 +25,7 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         
         var pplDataList: [String] = []
         
-        for k in 0..<21 {
+        for k in 1..<21 {
             pplDataList += [String(k)]
         }
         
@@ -90,6 +90,28 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
     }
     
     private func search() {
+        guard let departureTextFieldText = departureTextField.text, !departureTextFieldText.isEmpty,
+            let budgetPickerText = budgetPicker.text, !budgetPickerText.isEmpty,
+            let returnDatePickerText = returnDatePicker.text, !returnDatePickerText.isEmpty,
+            let numOfPplPickerText = numOfPplPicker.text, !numOfPplPickerText.isEmpty else {
+                let alert = UIAlertController(title: "未入力の項目があります", message: "全フォームに情報を入力してください", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+                return
+        }
+        
+//        let place = departureTextField.text
+//        let budget = budgetPicker.text
+//        let returnDate = returnDatePicker.text
+//        let numOfPpl = numOfPplPicker.text
+//
+//        TripInfoClient.get(info: <#T##String#>,
+//                           completionHandler: { (<#String#>) in
+//            <#code#>
+//        }) {
+//            <#code#>
+//        }
+        
         for textField in textfields {
             textField.resignFirstResponder()
         }
