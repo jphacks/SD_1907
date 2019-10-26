@@ -119,7 +119,7 @@ class PickerTextField: PickerView, UIPickerViewDelegate, UIPickerViewDataSource 
         picker.delegate = self
         picker.dataSource = self
         
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
         let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolbar.setItems([flexSpaceItem, doneItem], animated: true)

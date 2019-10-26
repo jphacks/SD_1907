@@ -44,23 +44,9 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
             departureTextField.delegate = self
         }
     }
-    @IBOutlet weak var budgetPicker: PickerTextField! {
-        didSet {
-            budgetPicker.delegate = self
-        }
-    }
-    
-    @IBOutlet weak var returnDatePicker: DatePickerKeyboard! {
-        didSet {
-            returnDatePicker.delegate = self
-        }
-    }
-
-    @IBOutlet weak var numOfPplPicker: PickerTextField! {
-        didSet {
-            numOfPplPicker.delegate = self
-        }
-    }
+    @IBOutlet weak var budgetPicker: PickerTextField!
+    @IBOutlet weak var returnDatePicker: DatePickerKeyboard!
+    @IBOutlet weak var numOfPplPicker: PickerTextField!
     
     @IBOutlet weak var VFView: UIVisualEffectView! {
         didSet {
