@@ -15,13 +15,27 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         super.viewDidLoad()
         
         configureObserver()
+        var buggetDataList: [String] = []
+
+        for i in stride(from: 1000, to: 501000, by: 1000) {
+            buggetDataList += [String(i)]
+        }
+        budgetPicker.setup(dataList: buggetDataList)
+        
+        var pplDataList: [String] = []
+        
+        for k in 0..<21 {
+            pplDataList += [String(k)]
+        }
+        
+        numOfPplPicker.setup(dataList: pplDataList)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
-        textfields += [departureTextField, budgetTextField, returnTextField, numberOfPplTextField]
+        textfields += [departureTextField, budgetPicker, returnDatePicker, numOfPplPicker]
     }
     
     @IBOutlet weak var departureTextField: UITextField! {
@@ -29,22 +43,24 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
             departureTextField.delegate = self
         }
     }
-    @IBOutlet weak var budgetTextField: UITextField! {
+    @IBOutlet weak var budgetPicker: PickerTextField! {
         didSet {
-            budgetTextField.delegate = self
+            budgetPicker.delegate = self
         }
     }
-    @IBOutlet weak var returnTextField: UITextField! {
+    
+    @IBOutlet weak var returnDatePicker: DatePickerKeyboard! {
         didSet {
-            returnTextField.delegate = self
-        }
-    }
-    @IBOutlet weak var numberOfPplTextField: UITextField! {
-        didSet {
-            numberOfPplTextField.delegate = self
+            returnDatePicker.delegate = self
         }
     }
 
+    @IBOutlet weak var numOfPplPicker: PickerTextField! {
+        didSet {
+            numOfPplPicker.delegate = self
+        }
+    }
+    
     @IBOutlet weak var VFView: UIVisualEffectView! {
         didSet {
             VFView.layer.cornerRadius = 8
@@ -98,19 +114,12 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
 //    https://tech-blog.sgr-ksmt.org/2016/02/20/form_changeable/
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        if textField != numberOfPplTextField {
-            let nextTag = textField.tag + 1
-            if let nextTextField = view.viewWithTag(nextTag) {
-                nextTextField.becomeFirstResponder()
-            }
-        } else {
-            search()
+        let nextTag = textField.tag + 1
+        if let nextTextField = view.viewWithTag(nextTag) {
+            nextTextField.becomeFirstResponder()
         }
-
         return true
     }
     
     
 }
-

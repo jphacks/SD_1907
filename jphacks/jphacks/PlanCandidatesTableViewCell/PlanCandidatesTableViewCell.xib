@@ -102,6 +102,7 @@
                 <outlet property="arriveTimeLabel" destination="N6Z-IX-wl1" id="d6F-ak-MZ4"/>
                 <outlet property="departTimeLabel" destination="Kau-KR-j68" id="1bc-Li-4lS"/>
                 <outlet property="destinationLabel" destination="KNl-gr-SIO" id="VgU-7f-lXD"/>
+                <outlet property="priceLabel" destination="kMR-Nh-Fey" id="bnr-6u-MRc"/>
                 <outlet property="totalTimeLabel" destination="Z7u-VY-6eR" id="pJn-eK-Lcg"/>
             </connections>
             <point key="canvasLocation" x="-89.130434782608702" y="117.1875"/>

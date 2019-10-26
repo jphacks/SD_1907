@@ -25,4 +25,6 @@ class PlanCandidatesTableViewCell: UITableViewCell {
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var departTimeLabel: UILabel!
     @IBOutlet weak var arriveTimeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
 }
