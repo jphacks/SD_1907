@@ -125,14 +125,11 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
                                             let vc = PlanCandidatesTableViewController()
                                             self?.navigationController?.pushViewController(vc, animated: true)
                                         }) {
-                                            
-                                            let vc = PlanCandidatesTableViewController()
-                                            self?.navigationController?.pushViewController(vc, animated: true)
+                                            self?.showErrorAlert()
                                         }
                                     }
         }) {
-            let vc = PlanCandidatesTableViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.showErrorAlert()
         }
     }
     
