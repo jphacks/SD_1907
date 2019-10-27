@@ -14,6 +14,7 @@
                 <outlet property="airportBLabel" destination="waU-L6-khu" id="Lof-VL-MwX"/>
                 <outlet property="flightNoLabel" destination="Bkc-44-bzC" id="Uzu-Nz-YGQ"/>
                 <outlet property="hotelImageView" destination="nOC-yR-Qsf" id="Rwu-PC-rrI"/>
+                <outlet property="hotelNameLabel" destination="jWI-KF-ebG" id="yAn-rV-Bgh"/>
                 <outlet property="price1Label" destination="QF6-Sg-ZJS" id="Z2D-8R-K5w"/>
                 <outlet property="price2Label" destination="a2m-fv-zhA" id="gYd-lK-n9u"/>
                 <outlet property="price3Label" destination="7bd-JS-r3k" id="GBt-HO-eXt"/>
@@ -143,7 +144,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="便名ABC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkc-44-bzC">
-                                    <rect key="frame" x="170" y="79" width="68.5" height="20.5"/>
+                                    <rect key="frame" x="222" y="79" width="68.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -556,6 +557,12 @@
                                         </view>
                                     </subviews>
                                 </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="便名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-nH-OLM">
+                                    <rect key="frame" x="170" y="79" width="52" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="Bkc-44-bzC" firstAttribute="centerY" secondItem="lm8-Wp-HH5" secondAttribute="centerY" id="06q-jg-SqS"/>
@@ -568,9 +575,9 @@
                                 <constraint firstItem="Cpz-rn-T6v" firstAttribute="centerX" secondItem="gPB-9I-HaI" secondAttribute="centerX" id="EQI-Gs-3cq"/>
                                 <constraint firstItem="lm8-Wp-HH5" firstAttribute="top" secondItem="bTh-vh-TO0" secondAttribute="bottom" id="HiQ-Y3-eCb"/>
                                 <constraint firstItem="HaX-RQ-kKF" firstAttribute="trailing" secondItem="nOC-yR-Qsf" secondAttribute="trailing" id="Ipq-3r-bdF"/>
-                                <constraint firstItem="Bkc-44-bzC" firstAttribute="leading" secondItem="lm8-Wp-HH5" secondAttribute="trailing" constant="30" id="Ju8-KH-Bqh"/>
                                 <constraint firstItem="nOC-yR-Qsf" firstAttribute="centerX" secondItem="gPB-9I-HaI" secondAttribute="centerX" id="MGW-Uy-v9a"/>
                                 <constraint firstItem="81E-Al-yok" firstAttribute="centerX" secondItem="gPB-9I-HaI" secondAttribute="centerX" id="MZC-AM-TB1"/>
+                                <constraint firstItem="Bkc-44-bzC" firstAttribute="leading" secondItem="zlc-nH-OLM" secondAttribute="trailing" id="Mvb-Ir-kaw"/>
                                 <constraint firstItem="Cpi-uw-4H8" firstAttribute="leading" secondItem="gPB-9I-HaI" secondAttribute="leading" id="NGd-hK-aT4"/>
                                 <constraint firstItem="bTh-vh-TO0" firstAttribute="centerX" secondItem="gPB-9I-HaI" secondAttribute="centerX" id="U9M-4b-SRU"/>
                                 <constraint firstItem="jv7-sR-qrK" firstAttribute="top" secondItem="k2v-p5-MBo" secondAttribute="bottom" id="aqs-Sc-WES"/>
@@ -579,8 +586,10 @@
                                 <constraint firstItem="jv7-sR-qrK" firstAttribute="centerX" secondItem="gPB-9I-HaI" secondAttribute="centerX" id="fhG-uf-K4Z"/>
                                 <constraint firstAttribute="trailing" secondItem="Cpi-uw-4H8" secondAttribute="trailing" id="gW4-wf-MJP"/>
                                 <constraint firstItem="bTh-vh-TO0" firstAttribute="top" secondItem="gPB-9I-HaI" secondAttribute="top" id="gew-2f-oCw"/>
+                                <constraint firstItem="zlc-nH-OLM" firstAttribute="leading" secondItem="lm8-Wp-HH5" secondAttribute="trailing" constant="30" id="m9L-sK-Oen"/>
                                 <constraint firstItem="k2v-p5-MBo" firstAttribute="top" secondItem="Cpz-rn-T6v" secondAttribute="bottom" id="nVV-5A-7M1"/>
                                 <constraint firstItem="lm8-Wp-HH5" firstAttribute="centerX" secondItem="gPB-9I-HaI" secondAttribute="centerX" constant="-72" id="qTJ-qD-7N8"/>
+                                <constraint firstItem="zlc-nH-OLM" firstAttribute="centerY" secondItem="Bkc-44-bzC" secondAttribute="centerY" id="sjK-rb-dCr"/>
                                 <constraint firstItem="Nwu-qC-Ibu" firstAttribute="trailing" secondItem="HaX-RQ-kKF" secondAttribute="trailing" id="u3n-Rh-0T7"/>
                                 <constraint firstItem="Nwu-qC-Ibu" firstAttribute="top" secondItem="HaX-RQ-kKF" secondAttribute="bottom" constant="8" id="wLa-Ms-X8G"/>
                                 <constraint firstItem="nOC-yR-Qsf" firstAttribute="top" secondItem="jv7-sR-qrK" secondAttribute="bottom" constant="30" id="wRS-G5-B91"/>

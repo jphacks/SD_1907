@@ -93,8 +93,8 @@ class TripInfo {
 
 extension TripInfo {
     static func parse(json: JSON) -> [TripInfo] {
-        let jsons = json.arrayValue
-        return jsons.map({ TripInfo(json: $0) })
+        let jsons = json.dictionaryValue
+        return jsons.map({ TripInfo(json: $0.value) })
     }
 }
 

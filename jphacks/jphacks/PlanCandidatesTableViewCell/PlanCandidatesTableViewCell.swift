@@ -23,7 +23,19 @@ class PlanCandidatesTableViewCell: UITableViewCell {
     
     func configure(indexPath: IndexPath) {
         let info = TripInfoRepository().findInfo()[indexPath.row]
-        
+        var hotelmage: UIImage? {
+            if let imageUrl = info.hotelImage {
+                do {
+                    let data = try Data(contentsOf: imageUrl)
+                    return UIImage(data: data)
+                } catch {
+                    fatalError()
+                }
+            } else {
+                return nil
+            }
+        }
+
         airportLabel.text = info.AirPortName
         hotelLabel.text = info.hotelname
         departTimeLabel.text = info.ForwardAirDepartTime
@@ -32,6 +44,7 @@ class PlanCandidatesTableViewCell: UITableViewCell {
         
         reviewQuantityLabel.text = info.hotelReviewNum
         reviewQualityLabel.text = info.hotelReviewRate
+        hotelImageView.image = hotelmage
     }
     
     @IBOutlet weak var airportLabel: UILabel!
@@ -43,4 +56,6 @@ class PlanCandidatesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var reviewQuantityLabel: UILabel!
     @IBOutlet weak var reviewQualityLabel: UILabel!
+    
+    @IBOutlet weak var hotelImageView: UIImageView!
 }

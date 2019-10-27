@@ -80,8 +80,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホテル名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWw-Pc-12k">
-                        <rect key="frame" x="16" y="40" width="70" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホテル名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWw-Pc-12k">
+                        <rect key="frame" x="16" y="40" width="70" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIJ-sP-JQZ">
+                        <rect key="frame" x="258" y="16" width="18" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="評価：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aJ-7h-aoY">
+                        <rect key="frame" x="155" y="92.5" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レビュー数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0K-Tp-IRs">
+                        <rect key="frame" x="120" y="117.5" width="104" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -89,7 +107,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="0Iw-Ji-fhr" firstAttribute="top" secondItem="Wqj-Bj-sMr" secondAttribute="bottom" constant="4" id="1ck-Sz-S82"/>
+                    <constraint firstItem="RIJ-sP-JQZ" firstAttribute="centerY" secondItem="kMR-Nh-Fey" secondAttribute="centerY" id="1hO-yf-fLW"/>
                     <constraint firstItem="N6Z-IX-wl1" firstAttribute="leading" secondItem="jfq-yn-R5V" secondAttribute="trailing" id="1vY-j8-ZX0"/>
+                    <constraint firstItem="m0K-Tp-IRs" firstAttribute="centerY" secondItem="0Iw-Ji-fhr" secondAttribute="centerY" id="5Ur-2I-MCZ"/>
+                    <constraint firstItem="Wqj-Bj-sMr" firstAttribute="leading" secondItem="0aJ-7h-aoY" secondAttribute="trailing" id="6xG-Td-ZPW"/>
                     <constraint firstAttribute="bottom" secondItem="0Iw-Ji-fhr" secondAttribute="bottom" constant="16" id="Arf-RD-1VD"/>
                     <constraint firstItem="hWw-Pc-12k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EFM-H9-XPY"/>
                     <constraint firstItem="KNl-gr-SIO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="LB2-px-Gj7"/>
@@ -98,13 +119,17 @@
                     <constraint firstItem="KNl-gr-SIO" firstAttribute="centerY" secondItem="kMR-Nh-Fey" secondAttribute="centerY" id="Tty-Hq-SP3"/>
                     <constraint firstItem="KNl-gr-SIO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Tu0-OW-BIs"/>
                     <constraint firstItem="4Xk-7i-ihv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="YSU-hF-HZt"/>
+                    <constraint firstItem="0aJ-7h-aoY" firstAttribute="centerY" secondItem="Wqj-Bj-sMr" secondAttribute="centerY" id="cQ4-Ds-iVZ"/>
                     <constraint firstItem="0Iw-Ji-fhr" firstAttribute="trailing" secondItem="Wqj-Bj-sMr" secondAttribute="trailing" id="ewA-8p-m1m"/>
                     <constraint firstItem="Kau-KR-j68" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gM3-u7-2ei"/>
                     <constraint firstItem="hWw-Pc-12k" firstAttribute="top" secondItem="KNl-gr-SIO" secondAttribute="bottom" constant="3" id="hVo-Jk-itr"/>
+                    <constraint firstItem="kMR-Nh-Fey" firstAttribute="leading" secondItem="RIJ-sP-JQZ" secondAttribute="trailing" id="iQZ-l3-g4w"/>
                     <constraint firstItem="Kau-KR-j68" firstAttribute="centerY" secondItem="jfq-yn-R5V" secondAttribute="centerY" id="jpg-JN-VSs"/>
                     <constraint firstAttribute="trailing" secondItem="kMR-Nh-Fey" secondAttribute="trailing" constant="16" id="kqT-PJ-rHP"/>
                     <constraint firstItem="0Iw-Ji-fhr" firstAttribute="trailing" secondItem="kMR-Nh-Fey" secondAttribute="trailing" id="pjW-zL-M70"/>
                     <constraint firstItem="4Xk-7i-ihv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qRB-Wf-ELS"/>
+                    <constraint firstItem="4Xk-7i-ihv" firstAttribute="leading" secondItem="hWw-Pc-12k" secondAttribute="trailing" constant="27.5" id="vAN-NP-fr4"/>
+                    <constraint firstItem="0Iw-Ji-fhr" firstAttribute="leading" secondItem="m0K-Tp-IRs" secondAttribute="trailing" id="wJQ-Hj-7An"/>
                     <constraint firstItem="N6Z-IX-wl1" firstAttribute="centerY" secondItem="jfq-yn-R5V" secondAttribute="centerY" id="zEc-tb-b8e"/>
                 </constraints>
             </tableViewCellContentView>
@@ -113,6 +138,7 @@
                 <outlet property="airportLabel" destination="KNl-gr-SIO" id="GcD-Pl-E2W"/>
                 <outlet property="arriveTimeLabel" destination="N6Z-IX-wl1" id="d6F-ak-MZ4"/>
                 <outlet property="departTimeLabel" destination="Kau-KR-j68" id="1bc-Li-4lS"/>
+                <outlet property="hotelImageView" destination="4Xk-7i-ihv" id="QPZ-4c-p82"/>
                 <outlet property="hotelLabel" destination="hWw-Pc-12k" id="CC7-hP-6Jp"/>
                 <outlet property="priceLabel" destination="kMR-Nh-Fey" id="bnr-6u-MRc"/>
                 <outlet property="reviewQualityLabel" destination="Wqj-Bj-sMr" id="j31-xE-Y4K"/>
