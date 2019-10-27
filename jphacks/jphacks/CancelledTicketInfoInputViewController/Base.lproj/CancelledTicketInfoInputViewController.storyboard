@@ -54,7 +54,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eE9-4n-dq1">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eE9-4n-dq1" customClass="PickerTextField" customModule="jphacks" customModuleProvider="target">
                                                 <rect key="frame" x="147" y="0.0" width="150" height="34"/>
                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -177,7 +177,7 @@
                         <outlet property="VFView" destination="ZJ1-Fx-ftC" id="EQ0-cm-1OI"/>
                         <outlet property="budgetPicker" destination="oOM-Tw-zaE" id="adW-8N-8PE"/>
                         <outlet property="confirmButton" destination="agH-Uo-yFR" id="kJH-vZ-TEc"/>
-                        <outlet property="departureTextField" destination="eE9-4n-dq1" id="FYx-48-vMl"/>
+                        <outlet property="departurePicker" destination="eE9-4n-dq1" id="hQd-Lj-rTm"/>
                         <outlet property="numOfPplPicker" destination="tXp-eL-Bxh" id="Uyo-YX-qad"/>
                         <outlet property="returnDatePicker" destination="IU4-EK-608" id="uSt-uy-euC"/>
                     </connections>

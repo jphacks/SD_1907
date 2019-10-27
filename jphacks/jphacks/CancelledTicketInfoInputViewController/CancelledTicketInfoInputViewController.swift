@@ -25,42 +25,31 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         
         var pplDataList: [String] = []
         
-        for k in 0..<21 {
+        for k in 1..<21 {
             pplDataList += [String(k)]
         }
         
         numOfPplPicker.setup(dataList: pplDataList)
+        
+        var placeList: [String] = []
+        for code in AirportCodeList.allCases {
+            placeList += [code.rawValue]
+        }
+        
+        departurePicker.setup(dataList: placeList)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
-        textfields += [departureTextField, budgetPicker, returnDatePicker, numOfPplPicker]
+        textfields += [departurePicker, budgetPicker, returnDatePicker, numOfPplPicker]
     }
     
-    @IBOutlet weak var departureTextField: UITextField! {
-        didSet {
-            departureTextField.delegate = self
-        }
-    }
-    @IBOutlet weak var budgetPicker: PickerTextField! {
-        didSet {
-            budgetPicker.delegate = self
-        }
-    }
-    
-    @IBOutlet weak var returnDatePicker: DatePickerKeyboard! {
-        didSet {
-            returnDatePicker.delegate = self
-        }
-    }
-
-    @IBOutlet weak var numOfPplPicker: PickerTextField! {
-        didSet {
-            numOfPplPicker.delegate = self
-        }
-    }
+    @IBOutlet weak var departurePicker: PickerTextField!
+    @IBOutlet weak var budgetPicker: PickerTextField!
+    @IBOutlet weak var returnDatePicker: DatePickerKeyboard!
+    @IBOutlet weak var numOfPplPicker: PickerTextField!
     
     @IBOutlet weak var VFView: UIVisualEffectView! {
         didSet {
@@ -104,12 +93,57 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
     }
     
     private func search() {
+        guard let departurePickerText = departurePicker.text, !departurePickerText.isEmpty,
+            let budgetPickerText = budgetPicker.text, !budgetPickerText.isEmpty,
+            let returnDatePickerText = returnDatePicker.text, !returnDatePickerText.isEmpty,
+            let numOfPplPickerText = numOfPplPicker.text, !numOfPplPickerText.isEmpty else {
+                let alert = UIAlertController(title: "未入力の項目があります",
+                                              message: "全フォームに情報を入力してください",
+                                              preferredStyle: .alert)
+                
+                alert.addAction(okAction())
+                present(alert, animated: true, completion: nil)
+                return
+        }
+        
         for textField in textfields {
             textField.resignFirstResponder()
         }
-        let vc = PlanCandidatesTableViewController()
         
-        navigationController?.pushViewController(vc, animated: true)
+        let airportCode = AirportCodeList(rawValue: departurePickerText)!
+        
+        InitialInfo.shared.airportName = airportCode.code
+        InitialInfo.shared.returnDate = returnDatePickerText
+        
+        TripInfoPostClient.post(depPlace: airportCode.code,
+                                budget: budgetPickerText,
+                                retDate: returnDatePicker.getDateString(),
+                                people: numOfPplPickerText,
+                                completionHandler: { [weak self] () in
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                        TripGetPostClient.get(completionHandler: {
+                                            let vc = PlanCandidatesTableViewController()
+                                            self?.navigationController?.pushViewController(vc, animated: true)
+                                        }) {
+                                            self?.showErrorAlert()
+                                        }
+                                    }
+        }) {
+            self.showErrorAlert()
+        }
+    }
+    
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "エラー",
+                                      message: "データを取得できませんでした",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(okAction())
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func okAction() -> UIAlertAction {
+        return UIAlertAction(title: "OK", style: .default, handler: nil)
     }
         
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

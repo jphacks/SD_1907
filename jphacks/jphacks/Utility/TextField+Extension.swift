@@ -78,14 +78,11 @@ class DatePickerKeyboard: PickerView {
     }
     
     // クラス外から日付を取り出すためのメソッド
-    func getDate() -> Date {
-        let component = Calendar.current.yearMonthDate(for: datePicker.date)
-        return component
-    }
-    
-    func setDate(date: Date) {
-        datePicker.date = date
-        setText()
+    func getDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        return dateFormatter.string(from: datePicker.date)
     }
 }
 
@@ -119,7 +116,7 @@ class PickerTextField: PickerView, UIPickerViewDelegate, UIPickerViewDataSource 
         picker.delegate = self
         picker.dataSource = self
         
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
         let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolbar.setItems([flexSpaceItem, doneItem], animated: true)
@@ -146,9 +143,5 @@ class PickerTextField: PickerView, UIPickerViewDelegate, UIPickerViewDataSource 
     
     @objc func done() {
         endEditing(true)
-    }
-    
-    func setDefault(row: Int) {
-        picker.selectRow(row, inComponent: 0, animated: true)
     }
 }

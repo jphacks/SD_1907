@@ -11,11 +11,13 @@
 		6163CB2200C347775B258FC1 /* Pods_jphacks_jphacksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1202D0CF735340F8222F6468 /* Pods_jphacks_jphacksUITests.framework */; };
 		640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */; };
 		640C9C712363D8FB0011C8B0 /* RouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C702363D8FB0011C8B0 /* RouteViewController.xib */; };
-		640C9C7E23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */; };
-		640C9C7F23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */; };
 		64E552FD23632C0600F172F4 /* PlanCandidatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */; };
 		64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */; };
 		666D9F55236488B300C91AC9 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F54236488B300C91AC9 /* Calendar+Extension.swift */; };
+		666D9F582364A61000C91AC9 /* TripInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F572364A61000C91AC9 /* TripInfoRepository.swift */; };
+		666D9F5A2365346200C91AC9 /* AirportCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F592365346200C91AC9 /* AirportCodeList.swift */; };
+		666D9F5C23654E5B00C91AC9 /* RetuernTripCandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */; };
+		666D9F5E23654E7000C91AC9 /* RetuernTripCandidatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */; };
 		66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56823630F1800CFA256 /* AppDelegate.swift */; };
 		66D0E56B23630F1800CFA256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56A23630F1800CFA256 /* SceneDelegate.swift */; };
 		66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */; };
@@ -57,12 +59,14 @@
 		3C9FFF0C72E9539F9CE2B7A7 /* Pods-jphacks-jphacksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jphacks-jphacksUITests.debug.xcconfig"; path = "Target Support Files/Pods-jphacks-jphacksUITests/Pods-jphacks-jphacksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		640C9C6C2363D69D0011C8B0 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		640C9C702363D8FB0011C8B0 /* RouteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteViewController.xib; sourceTree = "<group>"; };
-		640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetuernTripCandidatesTableViewCell.swift; sourceTree = "<group>"; };
-		640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetuernTripCandidatesTableViewCell.xib; sourceTree = "<group>"; };
 		64E552FB23632C0600F172F4 /* PlanCandidatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCandidatesTableViewCell.swift; sourceTree = "<group>"; };
 		64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCandidatesTableViewCell.xib; sourceTree = "<group>"; };
 		6608C310A20F708F75CE795B /* Pods_jphacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jphacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		666D9F54236488B300C91AC9 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		666D9F572364A61000C91AC9 /* TripInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfoRepository.swift; sourceTree = "<group>"; };
+		666D9F592365346200C91AC9 /* AirportCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCodeList.swift; sourceTree = "<group>"; };
+		666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetuernTripCandidatesView.swift; sourceTree = "<group>"; };
+		666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetuernTripCandidatesView.xib; sourceTree = "<group>"; };
 		66D0E56523630F1800CFA256 /* jphacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jphacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56823630F1800CFA256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D0E56A23630F1800CFA256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,13 +134,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		666D9F532364884700C91AC9 /* RetuernTripCandidatesTableViewCell */ = {
+		666D9F532364884700C91AC9 /* RetuernTripCandidatesView */ = {
 			isa = PBXGroup;
 			children = (
-				640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */,
-				640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */,
+				666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */,
+				666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */,
 			);
-			path = RetuernTripCandidatesTableViewCell;
+			path = RetuernTripCandidatesView;
 			sourceTree = "<group>";
 		};
 		666D9F56236488D800C91AC9 /* Utility */ = {
@@ -144,6 +148,8 @@
 			children = (
 				66F5C0A6236421C60049D6D6 /* TextField+Extension.swift */,
 				666D9F54236488B300C91AC9 /* Calendar+Extension.swift */,
+				666D9F572364A61000C91AC9 /* TripInfoRepository.swift */,
+				666D9F592365346200C91AC9 /* AirportCodeList.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -182,7 +188,7 @@
 				66F5C0952363ED5F0049D6D6 /* PlanCandidatesTableViewCell */,
 				66F5C09D2363F4670049D6D6 /* PlanCandidatesTableViewController */,
 				66F5C0962363ED890049D6D6 /* RouteViewController */,
-				666D9F532364884700C91AC9 /* RetuernTripCandidatesTableViewCell */,
+				666D9F532364884700C91AC9 /* RetuernTripCandidatesView */,
 				66D0E57123630F1900CFA256 /* Assets.xcassets */,
 				66D0E57323630F1900CFA256 /* LaunchScreen.storyboard */,
 				66D0E57623630F1900CFA256 /* Info.plist */,
@@ -378,8 +384,8 @@
 				640C9C712363D8FB0011C8B0 /* RouteViewController.xib in Resources */,
 				66D0E57223630F1900CFA256 /* Assets.xcassets in Resources */,
 				64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */,
+				666D9F5E23654E7000C91AC9 /* RetuernTripCandidatesView.xib in Resources */,
 				66D0E57023630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard in Resources */,
-				640C9C7F23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,11 +532,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				640C9C7E23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift in Sources */,
 				666D9F55236488B300C91AC9 /* Calendar+Extension.swift in Sources */,
 				64E552FD23632C0600F172F4 /* PlanCandidatesTableViewCell.swift in Sources */,
 				66D0E59C2363191B00CFA256 /* TripInfoClient.swift in Sources */,
 				66F5C0A42363F52F0049D6D6 /* PlanCandidatesTableViewController.swift in Sources */,
+				666D9F582364A61000C91AC9 /* TripInfoRepository.swift in Sources */,
+				666D9F5C23654E5B00C91AC9 /* RetuernTripCandidatesView.swift in Sources */,
+				666D9F5A2365346200C91AC9 /* AirportCodeList.swift in Sources */,
 				640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */,
 				66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */,
 				66F5C0A7236421C60049D6D6 /* TextField+Extension.swift in Sources */,
