@@ -94,30 +94,48 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
             let budgetPickerText = budgetPicker.text, !budgetPickerText.isEmpty,
             let returnDatePickerText = returnDatePicker.text, !returnDatePickerText.isEmpty,
             let numOfPplPickerText = numOfPplPicker.text, !numOfPplPickerText.isEmpty else {
-                let alert = UIAlertController(title: "未入力の項目があります", message: "全フォームに情報を入力してください", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                let alert = UIAlertController(title: "未入力の項目があります",
+                                              message: "全フォームに情報を入力してください",
+                                              preferredStyle: .alert)
+                
+                alert.addAction(okAction())
                 present(alert, animated: true, completion: nil)
                 return
         }
         
-//        let place = departureTextField.text
-//        let budget = budgetPicker.text
-//        let returnDate = returnDatePicker.text
-//        let numOfPpl = numOfPplPicker.text
-//
-//        TripInfoClient.get(info: <#T##String#>,
-//                           completionHandler: { (<#String#>) in
-//            <#code#>
-//        }) {
-//            <#code#>
-//        }
-        
         for textField in textfields {
             textField.resignFirstResponder()
         }
-        let vc = PlanCandidatesTableViewController()
         
-        navigationController?.pushViewController(vc, animated: true)
+        TripInfoPostClient.post(depPlace: departureTextFieldText,
+                                budget: budgetPickerText,
+                                retDate: returnDatePicker.getDateString(),
+                                people: numOfPplPickerText,
+                                completionHandler: { [weak self] () in
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                        TripGetPostClient.get(completionHandler: {
+                                            let vc = PlanCandidatesTableViewController()
+                                            self?.navigationController?.pushViewController(vc, animated: true)
+                                        }) {
+                                            self?.showErrorAlert()
+                                        }
+                                    }
+        }) {
+            self.showErrorAlert()
+        }
+    }
+    
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "エラー",
+                                      message: "データを取得できませんでした",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(okAction())
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func okAction() -> UIAlertAction {
+        return UIAlertAction(title: "OK", style: .default, handler: nil)
     }
         
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

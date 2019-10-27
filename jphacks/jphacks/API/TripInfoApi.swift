@@ -10,26 +10,59 @@ import Foundation
 import Alamofire
 
 enum Constant {
-    static let url = ""
+    static let postUrl = "https://jphacks-2cd97.firebaseio.com/req.json"
+    static let getUrl = "https://jphacks-2cd97.firebaseio.com/resultdata.json"
 }
 
-
-enum TripInfoApi {
+enum TripInfoPostApi {
     var baseURL: String {
-        return Constant.url
+        return Constant.postUrl
     }
-    case get(info: String)
+    case post(depPlace: String, budget: String, retDate: String, people: String)
 }
 
-extension TripInfoApi {
-    var path: String {
+extension TripInfoPostApi {
+    var headers: [String: String]? {
         switch self {
-        case let .get(urlString):
-            let url = "video_download?url=" + urlString
-            return url
+        case .post:
+            return nil
         }
     }
     
+    var method: Alamofire.HTTPMethod {
+        switch self {
+        case .post:
+            return .post
+        }
+    }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        case .post(let depPlace, let budget, let retDate, let people):
+            var params = [String: Any]()
+            params["req_ID"] = NSUUID().uuidString
+            params["dep_place"] = depPlace
+            params["ret_date"] = retDate
+            params["budget"] = budget
+            params["people"] = people
+            return params
+        }
+    }
+    
+    var alamofireParams: (url: String, method: Alamofire.HTTPMethod, headers: [String: String]?, params: [String: Any]?) {
+        let url = baseURL
+        return (url: url, method: method, headers: headers, params: parameters)
+    }
+}
+
+enum TripInfoGetApi {
+    var baseURL: String {
+        return Constant.postUrl
+    }
+    case get
+}
+
+extension TripInfoGetApi {
     var headers: [String: String]? {
         switch self {
         case .get:
@@ -40,7 +73,7 @@ extension TripInfoApi {
     var method: Alamofire.HTTPMethod {
         switch self {
         case .get:
-            return .get
+            return .post
         }
     }
     
@@ -52,7 +85,8 @@ extension TripInfoApi {
     }
     
     var alamofireParams: (url: String, method: Alamofire.HTTPMethod, headers: [String: String]?, params: [String: Any]?) {
-        let url = baseURL + path
+        let url = baseURL
         return (url: url, method: method, headers: headers, params: parameters)
     }
 }
+

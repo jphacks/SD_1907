@@ -78,14 +78,11 @@ class DatePickerKeyboard: PickerView {
     }
     
     // クラス外から日付を取り出すためのメソッド
-    func getDate() -> Date {
-        let component = Calendar.current.yearMonthDate(for: datePicker.date)
-        return component
-    }
-    
-    func setDate(date: Date) {
-        datePicker.date = date
-        setText()
+    func getDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        return dateFormatter.string(from: datePicker.date)
     }
 }
 
@@ -146,9 +143,5 @@ class PickerTextField: PickerView, UIPickerViewDelegate, UIPickerViewDataSource 
     
     @objc func done() {
         endEditing(true)
-    }
-    
-    func setDefault(row: Int) {
-        picker.selectRow(row, inComponent: 0, animated: true)
     }
 }

@@ -6,12 +6,15 @@
 //  Copyright © 2019 山下陽央. All rights reserved.
 //
 
+import Foundation
+import SwiftyJSON
+
 struct TripInfoRepository {
-    func findInfo() -> TripInfo? {
+    func findInfo() -> [TripInfo] {
         return TripInfoCache.shared.info
     }
     
-    func save(_ info: TripInfo) {
+    func save(_ info: [TripInfo]) {
         TripInfoCache.shared.info = info
     }
 }
@@ -19,15 +22,32 @@ struct TripInfoRepository {
 class TripInfoCache {
     static let shared = TripInfoCache()
     private init() {}
-    var info: TripInfo?
+    var info: [TripInfo] = []
+    
+    
 }
 
-struct TripInfo: Codable {
-    private let imageUrl: String?
-    private let connectedProviders: [String]
+class TripInfo {
+    let title: String
+    let attributedTitle: NSMutableAttributedString
+    let url: String
+    let imageUrl: URL?
+    let description: String
+    let mediaName: String
     
-    private enum CodingKeys: String, CodingKey {
-        case imageUrl = "profile_image"
-        case connectedProviders = "connected_providers"
+    init(json: JSON) {
+        title = json["title"].stringValue
+        attributedTitle = NSMutableAttributedString(string: title)
+        url = json["link"].stringValue
+        imageUrl = json["img_url"].url
+        description = json["description"].stringValue
+        mediaName = json["media_name"].stringValue
+    }
+}
+
+extension TripInfo {
+    static func parse(json: JSON) -> [TripInfo] {
+        let jsons = json.arrayValue
+        return jsons.map({ TripInfo(json: $0) })
     }
 }
