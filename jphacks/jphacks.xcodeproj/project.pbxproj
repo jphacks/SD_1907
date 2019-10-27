@@ -18,6 +18,8 @@
 		666D9F55236488B300C91AC9 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F54236488B300C91AC9 /* Calendar+Extension.swift */; };
 		666D9F582364A61000C91AC9 /* TripInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F572364A61000C91AC9 /* TripInfoRepository.swift */; };
 		666D9F5A2365346200C91AC9 /* AirportCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F592365346200C91AC9 /* AirportCodeList.swift */; };
+		666D9F5C23654E5B00C91AC9 /* RetuernTripCandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */; };
+		666D9F5E23654E7000C91AC9 /* RetuernTripCandidatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */; };
 		66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56823630F1800CFA256 /* AppDelegate.swift */; };
 		66D0E56B23630F1800CFA256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56A23630F1800CFA256 /* SceneDelegate.swift */; };
 		66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */; };
@@ -67,6 +69,8 @@
 		666D9F54236488B300C91AC9 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
 		666D9F572364A61000C91AC9 /* TripInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfoRepository.swift; sourceTree = "<group>"; };
 		666D9F592365346200C91AC9 /* AirportCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCodeList.swift; sourceTree = "<group>"; };
+		666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetuernTripCandidatesView.swift; sourceTree = "<group>"; };
+		666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetuernTripCandidatesView.xib; sourceTree = "<group>"; };
 		66D0E56523630F1800CFA256 /* jphacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jphacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56823630F1800CFA256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D0E56A23630F1800CFA256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 			children = (
 				640C9C7C23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.swift */,
 				640C9C7D23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib */,
+				666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */,
+				666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */,
 			);
 			path = RetuernTripCandidatesTableViewCell;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				640C9C712363D8FB0011C8B0 /* RouteViewController.xib in Resources */,
 				66D0E57223630F1900CFA256 /* Assets.xcassets in Resources */,
 				64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */,
+				666D9F5E23654E7000C91AC9 /* RetuernTripCandidatesView.xib in Resources */,
 				66D0E57023630F1800CFA256 /* CancelledTicketInfoInputViewController.storyboard in Resources */,
 				640C9C7F23640CC00011C8B0 /* RetuernTripCandidatesTableViewCell.xib in Resources */,
 			);
@@ -538,6 +545,7 @@
 				66D0E59C2363191B00CFA256 /* TripInfoClient.swift in Sources */,
 				66F5C0A42363F52F0049D6D6 /* PlanCandidatesTableViewController.swift in Sources */,
 				666D9F582364A61000C91AC9 /* TripInfoRepository.swift in Sources */,
+				666D9F5C23654E5B00C91AC9 /* RetuernTripCandidatesView.swift in Sources */,
 				666D9F5A2365346200C91AC9 /* AirportCodeList.swift in Sources */,
 				640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */,
 				66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */,

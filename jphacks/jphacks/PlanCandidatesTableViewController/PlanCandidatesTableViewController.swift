@@ -54,7 +54,7 @@ class PlanCandidatesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = RouteViewController()
+        let vc = RouteViewController(indexPath: indexPath)
         
         navigationController?.pushViewController(vc, animated: true)
     }

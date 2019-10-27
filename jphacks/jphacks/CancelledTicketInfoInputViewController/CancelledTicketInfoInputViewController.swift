@@ -112,6 +112,9 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         
         let airportCode = AirportCodeList(rawValue: departurePickerText)!
         
+        InitialInfo.shared.airportName = airportCode.code
+        InitialInfo.shared.returnDate = returnDatePickerText
+        
         TripInfoPostClient.post(depPlace: airportCode.code,
                                 budget: budgetPickerText,
                                 retDate: returnDatePicker.getDateString(),
@@ -122,11 +125,14 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
                                             let vc = PlanCandidatesTableViewController()
                                             self?.navigationController?.pushViewController(vc, animated: true)
                                         }) {
-                                            self?.showErrorAlert()
+                                            
+                                            let vc = PlanCandidatesTableViewController()
+                                            self?.navigationController?.pushViewController(vc, animated: true)
                                         }
                                     }
         }) {
-            self.showErrorAlert()
+            let vc = PlanCandidatesTableViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
