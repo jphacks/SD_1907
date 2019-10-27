@@ -153,17 +153,4 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         }
         return true
     }
-    
-    private func showProgress() {
-        SVProgressHUD.setDefaultStyle(.dark)
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.show()
-    }
-    
-    private func dismissProgress() {
-        SVProgressHUD.setDefaultMaskType(.none)
-        DispatchQueue.main.async {
-            SVProgressHUD.dismiss()
-        }
-    }
 }
