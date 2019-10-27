@@ -17,6 +17,7 @@
 		64E552FE23632C0600F172F4 /* PlanCandidatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E552FC23632C0600F172F4 /* PlanCandidatesTableViewCell.xib */; };
 		666D9F55236488B300C91AC9 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F54236488B300C91AC9 /* Calendar+Extension.swift */; };
 		666D9F582364A61000C91AC9 /* TripInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F572364A61000C91AC9 /* TripInfoRepository.swift */; };
+		666D9F5A2365346200C91AC9 /* AirportCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D9F592365346200C91AC9 /* AirportCodeList.swift */; };
 		66D0E56923630F1800CFA256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56823630F1800CFA256 /* AppDelegate.swift */; };
 		66D0E56B23630F1800CFA256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56A23630F1800CFA256 /* SceneDelegate.swift */; };
 		66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */; };
@@ -65,6 +66,7 @@
 		6608C310A20F708F75CE795B /* Pods_jphacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jphacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		666D9F54236488B300C91AC9 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
 		666D9F572364A61000C91AC9 /* TripInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfoRepository.swift; sourceTree = "<group>"; };
+		666D9F592365346200C91AC9 /* AirportCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCodeList.swift; sourceTree = "<group>"; };
 		66D0E56523630F1800CFA256 /* jphacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jphacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56823630F1800CFA256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D0E56A23630F1800CFA256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				66F5C0A6236421C60049D6D6 /* TextField+Extension.swift */,
 				666D9F54236488B300C91AC9 /* Calendar+Extension.swift */,
 				666D9F572364A61000C91AC9 /* TripInfoRepository.swift */,
+				666D9F592365346200C91AC9 /* AirportCodeList.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				66D0E59C2363191B00CFA256 /* TripInfoClient.swift in Sources */,
 				66F5C0A42363F52F0049D6D6 /* PlanCandidatesTableViewController.swift in Sources */,
 				666D9F582364A61000C91AC9 /* TripInfoRepository.swift in Sources */,
+				666D9F5A2365346200C91AC9 /* AirportCodeList.swift in Sources */,
 				640C9C6D2363D69D0011C8B0 /* RouteViewController.swift in Sources */,
 				66D0E56D23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift in Sources */,
 				66F5C0A7236421C60049D6D6 /* TextField+Extension.swift in Sources */,

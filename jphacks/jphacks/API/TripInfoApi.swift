@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 enum Constant {
-    static let postUrl = "https://jphacks-2cd97.firebaseio.com/req.json"
-    static let getUrl = "https://jphacks-2cd97.firebaseio.com/resultdata.json"
+    static let postUrl = ""
+    static let getUrl = ""
 }
 
 enum TripInfoPostApi {

@@ -30,20 +30,23 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
         }
         
         numOfPplPicker.setup(dataList: pplDataList)
+        
+        var placeList: [String] = []
+        for code in AirportCodeList.allCases {
+            placeList += [code.rawValue]
+        }
+        
+        departurePicker.setup(dataList: placeList)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
-        textfields += [departureTextField, budgetPicker, returnDatePicker, numOfPplPicker]
+        textfields += [departurePicker, budgetPicker, returnDatePicker, numOfPplPicker]
     }
     
-    @IBOutlet weak var departureTextField: UITextField! {
-        didSet {
-            departureTextField.delegate = self
-        }
-    }
+    @IBOutlet weak var departurePicker: PickerTextField!
     @IBOutlet weak var budgetPicker: PickerTextField!
     @IBOutlet weak var returnDatePicker: DatePickerKeyboard!
     @IBOutlet weak var numOfPplPicker: PickerTextField!
@@ -90,7 +93,7 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
     }
     
     private func search() {
-        guard let departureTextFieldText = departureTextField.text, !departureTextFieldText.isEmpty,
+        guard let departurePickerText = departurePicker.text, !departurePickerText.isEmpty,
             let budgetPickerText = budgetPicker.text, !budgetPickerText.isEmpty,
             let returnDatePickerText = returnDatePicker.text, !returnDatePickerText.isEmpty,
             let numOfPplPickerText = numOfPplPicker.text, !numOfPplPickerText.isEmpty else {
@@ -107,7 +110,9 @@ class CancelledTicketInfoInputViewController: UIViewController, UITextFieldDeleg
             textField.resignFirstResponder()
         }
         
-        TripInfoPostClient.post(depPlace: departureTextFieldText,
+        let airportCode = AirportCodeList(rawValue: departurePickerText)!
+        
+        TripInfoPostClient.post(depPlace: airportCode.code,
                                 budget: budgetPickerText,
                                 retDate: returnDatePicker.getDateString(),
                                 people: numOfPplPickerText,
