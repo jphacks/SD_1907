@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 enum Constant {
-    static let postUrl = ""
-    static let getUrl = ""
+    static let postUrl = "https://jphacks-2cd97.firebaseio.com/req.json"
+    static let getUrl = "https://jphacks-2cd97.firebaseio.com/resultdata.json"
 }
 
 enum TripInfoPostApi {
@@ -32,7 +32,7 @@ extension TripInfoPostApi {
     var method: Alamofire.HTTPMethod {
         switch self {
         case .post:
-            return .post
+            return .patch
         }
     }
     
@@ -57,7 +57,7 @@ extension TripInfoPostApi {
 
 enum TripInfoGetApi {
     var baseURL: String {
-        return Constant.postUrl
+        return Constant.getUrl
     }
     case get
 }
@@ -73,7 +73,7 @@ extension TripInfoGetApi {
     var method: Alamofire.HTTPMethod {
         switch self {
         case .get:
-            return .post
+            return .get
         }
     }
     
