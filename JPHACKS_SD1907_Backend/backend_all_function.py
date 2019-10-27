@@ -5,7 +5,7 @@ import requests
 import json
 import pickle
 # firebase cetrificate info
-cred = credentials.Certificate('/home/ubuntu/JPHACKS/JP/jphacks-2cd97-firebase-adminsdk-avjhi-1e4ae5f142.json')
+cred = credentials.Certificate('/home/ubuntu/JPHACKS/JP/<unique address>.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://jphacks-2cd97.firebaseio.com/',
     'databaseAuthVariableOverride': {
@@ -37,16 +37,10 @@ airjson = json.load(air)
 country_temp = "japan"
 pref_temp = "chiba"
 small_temp = "narita"
-api = "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&applicationId=1002854439090077222&format=xml&largeClassCode={country}&middleClassCode={pref}&smallClassCode={small}&datumType=1"
+api = "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&applicationId=<APP key>&format=xml&largeClassCode={country}&middleClassCode={pref}&smallClassCode={small}&datumType=1"
 # API using request parameter"Country","Prefecture","City"
 url = api.format(country = country_temp, pref = pref_temp, small = small_temp)
 
-# # 3:Rakuten travel API # if latitude
-# latitude = airjson[place][0]
-# longtitude = airjson[place][1]
-# api = "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&applicationId=1002854439090077222&latitude={lati}&longitude={long}&datumType=1&searchRadius=2.9"
-# #2.1 API using request parameter"Country","Prefecture","City"
-# url = api.format(lati = latitude, long = longtitude)
 req_rakuten = requests.get(url)
 rakutenjson = json.loads(req_rakuten.text)
 
