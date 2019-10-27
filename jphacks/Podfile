@@ -7,7 +7,6 @@ target 'jphacks' do
   
   pod 'R.swift'
   pod 'SwiftyJSON'
-  pod 'SVProgressHUD'
   pod 'Alamofire'
   # Pods for jphacks
 

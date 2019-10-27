@@ -67,7 +67,7 @@
 		666D9F592365346200C91AC9 /* AirportCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCodeList.swift; sourceTree = "<group>"; };
 		666D9F5B23654E5B00C91AC9 /* RetuernTripCandidatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetuernTripCandidatesView.swift; sourceTree = "<group>"; };
 		666D9F5D23654E7000C91AC9 /* RetuernTripCandidatesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetuernTripCandidatesView.xib; sourceTree = "<group>"; };
-		66D0E56523630F1800CFA256 /* jphacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jphacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D0E56523630F1800CFA256 /* ATP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D0E56823630F1800CFA256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D0E56A23630F1800CFA256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		66D0E56C23630F1800CFA256 /* CancelledTicketInfoInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelledTicketInfoInputViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		66D0E56623630F1800CFA256 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66D0E56523630F1800CFA256 /* jphacks.app */,
+				66D0E56523630F1800CFA256 /* ATP.app */,
 				66D0E57B23630F1900CFA256 /* jphacksTests.xctest */,
 				66D0E58623630F1900CFA256 /* jphacksUITests.xctest */,
 			);
@@ -289,7 +289,7 @@
 			);
 			name = jphacks;
 			productName = jphacks;
-			productReference = 66D0E56523630F1800CFA256 /* jphacks.app */;
+			productReference = 66D0E56523630F1800CFA256 /* ATP.app */;
 			productType = "com.apple.product-type.application";
 		};
 		66D0E57A23630F1900CFA256 /* jphacksTests */ = {
@@ -727,7 +727,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = akio.yamashita.jphacks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ATP;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -746,7 +746,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = akio.yamashita.jphacks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ATP;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

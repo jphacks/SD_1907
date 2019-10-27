@@ -30,7 +30,7 @@ class RouteViewController: UIViewController {
         timeBLabel.text = info.ForwardAirArriveTime
         
         
-        flightNoLabel.text = info.ForwardAirTicketPrice
+        flightNoLabel.text = info.ReturnAirCandidate1
         
         
         hotelImageView.image = hotelmage
@@ -54,6 +54,8 @@ class RouteViewController: UIViewController {
         price1Label.text = info.ReturnAirTicketPrice1
         price2Label.text = info.ReturnAirTicketPrice2
         price3Label.text = info.ReturnAirTicketPrice3
+        
+        hotelNameLabel.text = info.hotelname
     }
     
     private var hotelmage: UIImage? {
@@ -106,6 +108,8 @@ class RouteViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+    
+    @IBOutlet weak var hotelNameLabel: UILabel!
     
     @IBAction func didTapDetailButton(_ sender: Any) {
         if let url = info.hotelDetail,
