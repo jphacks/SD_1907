@@ -45,7 +45,7 @@ class PlanCandidatesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.planCandidatesTableViewCell, for: indexPath)!
-        
+        cell.configure(indexPath: indexPath)
         return cell
     }
     
