@@ -21,8 +21,22 @@ class PlanCandidatesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBOutlet weak var destinationLabel: UILabel!
-    @IBOutlet weak var totalTimeLabel: UILabel!
+    func configure(indexPath: IndexPath) {
+        let info = TripInfoRepository().findInfo()[indexPath.row]
+        
+        airportLabel.text = info.AirPortName
+        hotelLabel.text = info.hotelname
+        departTimeLabel.text = info.ForwardAirDepartTime
+        arriveTimeLabel.text = info.ForwardAirArriveTime
+        priceLabel.text = info.ForwardAirTicketPrice
+        
+        reviewQuantityLabel.text = info.hotelReviewNum
+        reviewQualityLabel.text = info.hotelReviewRate
+    }
+    
+    @IBOutlet weak var airportLabel: UILabel!
+    @IBOutlet weak var hotelLabel: UILabel!
+
     @IBOutlet weak var departTimeLabel: UILabel!
     @IBOutlet weak var arriveTimeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!

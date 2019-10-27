@@ -10,6 +10,15 @@ import UIKit
 
 class PlanCandidatesTableViewController: UITableViewController {
         
+    init() {
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +40,7 @@ class PlanCandidatesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return TripInfoRepository().findInfo().count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,7 +54,7 @@ class PlanCandidatesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = RouteViewController()
+        let vc = RouteViewController(indexPath: indexPath)
         
         navigationController?.pushViewController(vc, animated: true)
     }

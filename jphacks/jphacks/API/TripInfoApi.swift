@@ -6,54 +6,87 @@
 //  Copyright © 2019 山下陽央. All rights reserved.
 //
 
-//import Foundation
-//import Alamofire
+import Foundation
+import Alamofire
 
-//enum TripInfoApi {
-//    var baseURL: String {
-//        return Constant.getAPISeverUrl()
-//    }
-//    
-//    // param1: token
-//    // param2: userId
-//    case post(String, Int)
-//}
-//
-//extension TripInfoApi {
-//    internal var path: String {
-//        switch self {
-//        case .post:
-//            return "users/me/version"
-//        }
-//    }
-//    
-//    internal var headers: [String: String]? {
-//        switch self {
-//        case let .post(token, _):
-//            return ["Authorization": token, "Accept": "application/json"]
-//        }
-//    }
-//    
-//    internal var method: Alamofire.HTTPMethod {
-//        switch self {
-//        case .post:
-//            return .post
-//        }
-//    }
-//    
-//    internal var parameters: [String: AnyObject]? {
-//        switch self {
-//        case let .post(_, userId):
-//            return [
-//                "ios_app_version": VersionManager.shared.current as AnyObject,
-//                "id": userId as AnyObject,
-//                "language": (LanguageCodePredictor.infer() ?? "") as AnyObject
-//            ]
-//        }
-//    }
-//    
-//    internal var alamofireParams: (url: String, method: Alamofire.HTTPMethod, headers: [String: String]?, params: [String: Any]?) {
-//        let url = baseURL + path
-//        return (url: url, method: method, headers: headers, params: parameters)
-//    }
-//}
+enum Constant {
+    static let postUrl = "https://jphacks-2cd97.firebaseio.com/req.json"
+    static let getUrl = "https://jphacks-2cd97.firebaseio.com/resultdata.json"
+}
+
+enum TripInfoPostApi {
+    var baseURL: String {
+        return Constant.postUrl
+    }
+    case post(depPlace: String, budget: String, retDate: String, people: String)
+}
+
+extension TripInfoPostApi {
+    var headers: [String: String]? {
+        switch self {
+        case .post:
+            return nil
+        }
+    }
+    
+    var method: Alamofire.HTTPMethod {
+        switch self {
+        case .post:
+            return .patch
+        }
+    }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        case .post(let depPlace, let budget, let retDate, let people):
+            var params = [String: Any]()
+            params["req_ID"] = NSUUID().uuidString
+            params["dep_place"] = depPlace
+            params["ret_date"] = retDate
+            params["budget"] = budget
+            params["people"] = people
+            return params
+        }
+    }
+    
+    var alamofireParams: (url: String, method: Alamofire.HTTPMethod, headers: [String: String]?, params: [String: Any]?) {
+        let url = baseURL
+        return (url: url, method: method, headers: headers, params: parameters)
+    }
+}
+
+enum TripInfoGetApi {
+    var baseURL: String {
+        return Constant.getUrl
+    }
+    case get
+}
+
+extension TripInfoGetApi {
+    var headers: [String: String]? {
+        switch self {
+        case .get:
+            return nil
+        }
+    }
+    
+    var method: Alamofire.HTTPMethod {
+        switch self {
+        case .get:
+            return .get
+        }
+    }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        case .get:
+            return nil
+        }
+    }
+    
+    var alamofireParams: (url: String, method: Alamofire.HTTPMethod, headers: [String: String]?, params: [String: Any]?) {
+        let url = baseURL
+        return (url: url, method: method, headers: headers, params: parameters)
+    }
+}
+
